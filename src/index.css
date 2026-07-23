@@ -93,21 +93,37 @@
   font-size: clamp(1.125rem, 1vw + 0.75rem, 1.25rem); /* 18px to 20px */
   line-height: 1.65;
   letter-spacing: -0.01em;
-  color: #D4D4D8;
+  color: #F8FAFC;
+  font-weight: 500;
 }
 
 .text-body {
   font-size: 1rem; /* 16px */
   line-height: 1.6;
   letter-spacing: -0.006em;
-  color: #A1A1AA;
+  color: #E2E8F0;
+  font-weight: 500;
 }
 
 .text-caption {
   font-size: 0.875rem; /* 14px */
   line-height: 1.5;
   letter-spacing: -0.003em;
-  color: #71717A;
+  color: #CBD5E1;
+  font-weight: 500;
+}
+
+/* High Contrast Font Legibility Rules */
+.text-zinc-500, .text-slate-500, .text-gray-500 {
+  color: #CBD5E1;
+}
+
+.text-zinc-400, .text-slate-400, .text-gray-400 {
+  color: #E2E8F0;
+}
+
+.text-zinc-300, .text-slate-300, .text-gray-300 {
+  color: #F8FAFC;
 }
 
 /* Global Button Architecture (Apple / Vercel / Linear Grade) */
@@ -232,31 +248,39 @@ html.light, body.light, .light {
 
 /* Light Typography Overrides */
 .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
-  color: #0F172A !important;
+  color: #091E13 !important;
 }
 
 .light .text-white {
-  color: #0F172A !important;
+  color: #091E13 !important;
 }
 
-.light .text-zinc-100 {
-  color: #0F172A !important;
+.light .text-zinc-100, .light .text-slate-100 {
+  color: #091E13 !important;
 }
 
-.light .text-zinc-200 {
-  color: #1E293B !important;
+.light .text-zinc-200, .light .text-slate-200 {
+  color: #123020 !important;
 }
 
-.light .text-zinc-300 {
-  color: #334155 !important;
+.light .text-zinc-300, .light .text-slate-300 {
+  color: #183B2A !important;
 }
 
-.light .text-zinc-400 {
-  color: #475569 !important;
+.light .text-zinc-400, .light .text-slate-400 {
+  color: #1E4733 !important;
 }
 
-.light .text-zinc-500 {
-  color: #64748B !important;
+.light .text-zinc-500, .light .text-slate-500 {
+  color: #2D5842 !important;
+}
+
+.light .text-body, .light p {
+  color: #183B2A !important;
+}
+
+.light .text-lead {
+  color: #091E13 !important;
 }
 
 /* Light Form Control Overrides */

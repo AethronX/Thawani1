@@ -44,16 +44,16 @@
   --tr-label:       0.09em;  /* Uppercase micro-labels */
 
   /* Dark Background Optical Colors */
-  --color-text-primary: #E6EFEA;
-  --color-text-secondary: #9FB2A8;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #E2E8F0;
   --color-accent-emerald: #00D166;
   --color-accent-mint: #00F076;
 }
 
 /* Light Theme Typography Overrides */
 html.light, body.light, .light {
-  --color-text-primary: #0F172A;
-  --color-text-secondary: #475569;
+  --color-text-primary: #091E13;
+  --color-text-secondary: #183B2A;
 }
 
 /* Base Typographic Hierarchy Rules */
