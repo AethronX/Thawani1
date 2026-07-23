@@ -28,10 +28,10 @@
   }
 
   body {
-    background-color: var(--graphite);
+    background-color: var(--ink-950);
     background-image: 
-      radial-gradient(circle at 80% 20%, var(--deep-emerald) 0%, transparent 40%),
-      radial-gradient(circle at 10% 80%, rgba(0, 209, 102, 0.05) 0%, transparent 30%);
+      radial-gradient(circle at 80% 10%, rgba(0, 200, 83, 0.15) 0%, transparent 45%),
+      radial-gradient(circle at 15% 85%, rgba(26, 224, 121, 0.08) 0%, transparent 35%);
     background-attachment: fixed;
     color: #F4F4F5;
     font-family: var(--f-sans);

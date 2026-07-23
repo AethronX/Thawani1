@@ -46,8 +46,8 @@
   /* Dark Background Optical Colors */
   --color-text-primary: #E6EFEA;
   --color-text-secondary: #9FB2A8;
-  --color-accent-emerald: #34D399;
-  --color-accent-mint: #10B981;
+  --color-accent-emerald: #00D166;
+  --color-accent-mint: #00F076;
 }
 
 /* Light Theme Typography Overrides */
@@ -128,7 +128,7 @@ html.light, body.light, .light {
   /* Applied only to English LTR text to protect Arabic connected script */
   [dir="ltr"] .hero-title .accent,
   [lang="en"] .hero-title .accent {
-    background: linear-gradient(180deg, #ECFDF5 0%, #34D399 55%, #10B981 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #00F076 50%, #00D166 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -189,7 +189,7 @@ html.light, body.light, .light {
   background: none !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
-  color: #34D399 !important;
+  color: #00D166 !important;
 }
 
 /* Latin brand name wrapper inside Arabic sentences */

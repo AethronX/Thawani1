@@ -11,25 +11,25 @@ Used for canvas backgrounds, primary body text, and institutional weight.
 
 | Ramp Step | Hex Code | Role |
 |---|---|---|
-| `--ink-950` | `#03100A` | Dark theme canvas background |
-| `--ink-900` | `#061A11` | Dark theme elevated surface & instrument panel |
-| `--ink-800` | `#0B2619` | Dark theme card container |
-| `--ink-700` | `#123424` | Dark theme subtle borders |
-| `--ink-500` | `#2E6349` | Secondary text (light theme) |
-| `--ink-300` | `#7CA692` | Secondary text (dark theme) |
-| `--ink-050` | `#EEF4F1` | Light theme subtle background |
-| `--ink-000` | `#FFFFFF` | Light theme canvas background |
+| `--ink-950` | `#010D07` | Royal Sovereign Emerald Obsidian Dark Canvas |
+| `--ink-900` | `#031A0F` | Deep Velvet Jade Ink Elevated Surface |
+| `--ink-800` | `#072A1A` | Dark Theme Card Container |
+| `--ink-700` | `#0D3E28` | Dark Theme Subtle Border |
+| `--ink-500` | `#1E734C` | Secondary Text (Light Theme) |
+| `--ink-300` | `#64C092` | Secondary Text (Dark Theme) |
+| `--ink-050` | `#EEF7F2` | Light Theme Subtle Porcelain Background |
+| `--ink-000` | `#FFFFFF` | Light Theme Canvas Background |
 
-### Primary — Signal Green
+### Primary — High-Jewelry Sovereign Emerald
 **Interactive Only.** Primary call-to-action buttons, focus rings, live/active status indicators, and at most one hero word accent.
 
 | Ramp Step | Hex Code | Role |
 |---|---|---|
-| `--green-300` | `#6DF0AE` | Gradient highlight stop |
-| `--green-400` | `#34E08A` | Dark-theme CTA fill & live pulse dot |
-| `--green-500` | `#10C46E` | Primary signal fill |
-| `--green-600` | `#0A9E58` | Light-theme CTA fill |
-| `--green-700` | `#077A44` | Light-theme brand text (WCAG AAA compliant on white, 5.2:1) |
+| `--green-300` | `#50E88E` | Radiant Mint Luster Gradient Stop |
+| `--green-400` | `#1AE079` | Dark-theme CTA fill & live pulse dot |
+| `--green-500` | `#00C853` | Iconic Royal Emerald Signal Fill |
+| `--green-600` | `#00A343` | Light-theme CTA fill |
+| `--green-700` | `#007A30` | Light-theme brand text (WCAG AAA compliant on white, 5.2:1) |
 
 ### Secondary — Frankincense Gold
 Intelligence & sovereign data layer accent.

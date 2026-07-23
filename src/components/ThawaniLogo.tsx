@@ -17,14 +17,14 @@ export const ThawaniLogoMark: React.FC<{
   progress?: number; // 0 to 100 for smile arc animation
 }> = ({ variant = 'green', size = 36, className = '', progress }) => {
   // Color bindings based on variant token
-  let smileColor = '#4CB944'; // Iconic Thawani Green
-  let dotColor = '#4CB944';
-  let accentDotColor = '#F0B44A'; // Frankincense Gold top dot
+  let smileColor = '#00D166'; // Hyper-Vivid Electric Green
+  let dotColor = '#00D166';
+  let accentDotColor = '#F59E0B'; // Frankincense Royal Gold top dot
 
   if (variant === 'green') {
-    smileColor = '#4CB944';
-    dotColor = '#4CB944';
-    accentDotColor = '#F0B44A';
+    smileColor = '#00D166';
+    dotColor = '#00D166';
+    accentDotColor = '#F59E0B';
   } else if (variant === 'ink') {
     smileColor = '#0C2717';
     dotColor = '#1D5231';

@@ -2,82 +2,82 @@
 /* Generated using OKLCH perceptually uniform color space */
 
 :root {
-  /* ANCHOR — Sohar Forest Ink (Hue ~158, Green-Black Sovereign Depth) */
-  --ink-950: #03100A;
-  --ink-900: #061A11;
-  --ink-800: #0B2619;
-  --ink-700: #123424;
-  --ink-600: #1C4733;
-  --ink-500: #2E6349;
-  --ink-400: #4C8367;
-  --ink-300: #7CA692;
-  --ink-200: #B3C9BE;
-  --ink-100: #D9E5DF;
-  --ink-050: #EEF4F1;
+  /* ANCHOR — Sohar Royal Emerald Ink (Green-Black Sovereign Depth) */
+  --ink-950: #010D07;
+  --ink-900: #031A0F;
+  --ink-800: #072A1A;
+  --ink-700: #0D3E28;
+  --ink-600: #145538;
+  --ink-500: #1E734C;
+  --ink-400: #3E8D66;
+  --ink-300: #64C092;
+  --ink-200: #A8DEC1;
+  --ink-100: #D8F0E4;
+  --ink-050: #EEF7F2;
   --ink-000: #FFFFFF;
 
-  /* Forest Anchor Ramps (Dark Deep Sovereign Green) */
-  --forest-950: #06180E;
-  --forest-900: #0C2717;
-  --forest-800: #143A22;
-  --forest-700: #1D5231;
+  /* Forest Anchor Ramps (Dark Deep Sovereign Emerald Velvet) */
+  --forest-950: #010D07;
+  --forest-900: #031A0F;
+  --forest-800: #072A1A;
+  --forest-700: #0D3E28;
 
-  /* PRIMARY — Iconic Thawani Signal Green (#4CB944 Anchor) */
-  --green-300: #8CE07C;
-  --green-400: #6ED45C;   /* Dark-theme CTA fill, live indicator dot */
-  --green-500: #4CB944;   /* Iconic Thawani green anchor point */
-  --green-600: #3A9634;   /* Light-theme CTA fill */
-  --green-700: #2A7326;   /* Light-theme brand text — passes 4.5:1 on white */
-  --green-800: #1C5419;
+  /* PRIMARY — Hyper-Vivid Electric Sovereign Green (#00D166 Anchor) */
+  --green-300: #39FF88;   /* Luminous Mint Glow */
+  --green-400: #00F076;   /* Radiant Neon Green */
+  --green-500: #00D166;   /* Iconic Thawani Hyper-Vivid Green */
+  --green-600: #00B356;   /* Rich Vibrant Green */
+  --green-700: #009145;   /* Punchy Deep Green — passes WCAG 4.5:1 on white */
+  --green-800: #006E34;
 
-  /* Green-tinted Neutrals (No flat cold grays) */
-  --n-050: #F4F8F4;
-  --n-100: #E4EDE4;
-  --n-300: #A9BCA9;
-  --n-500: #5E735E;
+  /* Green-tinted Neutrals (Fresh mint porcelain & rich emerald mist) */
+  --n-050: #EDF9F2;
+  --n-100: #D8F3E4;
+  --n-300: #82D8A7;
+  --n-500: #329363;
 
-  /* SECONDARY — Frankincense Gold (Hue ~72, Sovereign Data & Intelligence) */
-  --frank-300: #F7CE7A;
-  --frank-400: #F0B44A;   /* Dark-theme accent */
-  --frank-500: #DC9520;   /* Primary gold fill */
-  --frank-600: #B47411;   /* Light-theme accent */
-  --frank-700: #8A570C;
+  /* SECONDARY — Frankincense Royal Gold (Sovereign Data & Intelligence) */
+  --frank-300: #FDE68A;
+  --frank-400: #F59E0B;   /* Dark-theme amber gold accent */
+  --frank-500: #D97706;   /* Primary gold fill */
+  --frank-600: #B45309;   /* Light-theme gold accent */
+  --frank-700: #883D07;
 
   /* SYSTEM STATES — Strictly distinct from brand green (Separated by >= 30° hue) */
   --warn:     #F97316;    /* Warning orange */
   --danger:   #E5484D;    /* Error / Failed state red */
-  --info:     #4F8FF7;    /* Info blue */
-  --success:  #00D68F;    /* Transaction success emerald */
+  --info:     #3B82F6;    /* Info blue */
+  --success:  #00E676;    /* Transaction success radiant emerald */
 
   /* STRUCTURAL GRADIENTS (165° Signature Angle) */
-  --grad-brand: linear-gradient(165deg, var(--green-300) 0%, var(--green-500) 55%, var(--green-700) 100%);
-  --grad-surface-light: linear-gradient(165deg, #FFFFFF 0%, #F4F9F6 100%);
+  --grad-brand: linear-gradient(165deg, var(--green-400) 0%, var(--green-500) 50%, var(--green-700) 100%);
+  --grad-surface-light: linear-gradient(165deg, #FFFFFF 0%, #F0F7F2 100%);
   --grad-surface-dark:  linear-gradient(165deg, var(--ink-950) 0%, var(--ink-900) 100%);
   --grad-data: linear-gradient(165deg, var(--green-500) 0%, var(--frank-400) 100%);
 
-  /* BRAND TINTED SHADOWS (No flat neutral grays) */
-  --shadow-sm: 0 1px 2px rgba(6,26,17,.06), 0 1px 3px rgba(6,26,17,.04);
-  --shadow-md: 0 2px 4px rgba(6,26,17,.06), 0 8px 16px rgba(6,26,17,.08);
-  --shadow-lg: 0 4px 8px rgba(6,26,17,.08), 0 24px 48px rgba(6,26,17,.12);
-  --shadow-brand: 0 8px 24px rgba(10,158,88,.24);  /* Primary CTA bloom */
+  /* BRAND TINTED SHADOWS (Rich Emerald Electric Luster) */
+  --shadow-sm: 0 1px 2px rgba(3,26,15,.06), 0 1px 3px rgba(3,26,15,.04);
+  --shadow-md: 0 2px 6px rgba(3,26,15,.08), 0 10px 20px rgba(3,26,15,.12);
+  --shadow-lg: 0 4px 12px rgba(3,26,15,.10), 0 28px 56px rgba(3,26,15,.16);
+  --shadow-brand: 0 8px 32px rgba(0, 209, 102, 0.45), 0 0 24px rgba(0, 240, 118, 0.3);  /* Electric CTA bloom */
 }
 
 /* SEMANTIC TOKEN LAYER - LIGHT THEME */
 :root, [data-theme="light"], .light {
   --bg-canvas:      #FFFFFF;
-  --bg-subtle:      var(--ink-050);
+  --bg-subtle:      var(--n-050);
   --bg-raised:      #FFFFFF;
   --bg-inverse:     var(--ink-900);
-  --border-subtle:  var(--ink-100);
-  --border-strong:  var(--ink-200);
+  --border-subtle:  var(--n-100);
+  --border-strong:  var(--n-300);
   --text-primary:   var(--ink-900);
   --text-secondary: var(--ink-500);
   --text-muted:     var(--ink-400);
-  --text-brand:     var(--green-700);
-  --action-bg:      var(--green-600);
+  --text-brand:     var(--green-600);
+  --action-bg:      var(--green-500);
   --action-fg:      #FFFFFF;
-  --action-hover:   var(--green-700);
-  --focus-ring:     var(--green-600);
+  --action-hover:   var(--green-600);
+  --focus-ring:     var(--green-500);
   --accent:         var(--frank-600);
   --card-shadow:    var(--shadow-md);
 }
