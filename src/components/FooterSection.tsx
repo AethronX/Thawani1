@@ -1,14 +1,7 @@
 import React from 'react';
 import { Language } from '../types';
 import { ThawaniLogo } from './ThawaniLogo';
-import { 
-  ShieldCheck, 
-  Globe, 
-  Activity, 
-  Lock, 
-  Building2, 
-  CheckCircle2 
-} from 'lucide-react';
+import { Globe, Sparkles } from 'lucide-react';
 
 interface FooterSectionProps {
   lang: Language;
@@ -88,13 +81,13 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
           {/* Links Columns */}
           {Object.entries(footerNav).map(([key, section]) => (
             <div key={key} className="space-y-3">
-              <h4 className="text-xs font-mono font-bold uppercase text-white tracking-wider">
+              <h4 className="text-xs font-mono font-bold uppercase text-[var(--text-primary)] tracking-wider">
                 {isAr ? section.titleAr : section.titleEn}
               </h4>
               <ul className="space-y-2 text-xs">
                 {section.links.map((link, idx) => (
                   <li key={idx}>
-                    <a href="#dashboard" className="hover:text-[#00D68F] transition-colors">
+                    <a href="#products" className="hover:text-[var(--text-brand)] transition-colors">
                       {isAr ? link.nameAr : link.nameEn}
                     </a>
                   </li>
@@ -107,21 +100,29 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono gap-4">
-          <div className="text-zinc-500">
-            © 2035 Thawani Technologies SAOC. {isAr ? 'جميع الحقوق محفوظة. سلطنة عُمان' : 'All rights reserved. Sultanate of Oman.'}
+          <div className="text-[var(--text-muted)]">
+            © 2026 Thawani Technologies SAOC. {isAr ? 'جميع الحقوق محفوظة. سلطنة عُمان' : 'All rights reserved. Sultanate of Oman.'}
           </div>
 
           <div className="flex items-center space-x-4 rtl:space-x-reverse">
             <button
-              onClick={() => setLang(isAr ? 'en' : 'ar')}
-              className="p-2 rounded-lg bg-white/5 border border-white/10 text-zinc-300 hover:text-white transition-colors flex items-center space-x-1 rtl:space-x-reverse"
+              onClick={onOpenAiAssistant}
+              className="px-3 py-1.5 rounded-lg bg-[var(--bg-subtle)] border border-[var(--border-subtle)] text-[var(--text-primary)] hover:border-[var(--border-strong)] transition-colors flex items-center space-x-1.5 rtl:space-x-reverse"
             >
-              <Globe className="w-3.5 h-3.5 text-[#00D68F]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#00D166]" />
+              <span>{isAr ? 'المساعد الذكي' : 'AI Assistant'}</span>
+            </button>
+
+            <button
+              onClick={() => setLang(isAr ? 'en' : 'ar')}
+              className="p-2 rounded-lg bg-[var(--bg-subtle)] border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors flex items-center space-x-1 rtl:space-x-reverse"
+            >
+              <Globe className="w-3.5 h-3.5 text-[#00D166]" />
               <span>{isAr ? 'English' : 'العربية'}</span>
             </button>
 
-            <span className="text-zinc-600">|</span>
-            <span className="text-zinc-400">Muscat, Sultanate of Oman</span>
+            <span className="text-[var(--text-muted)]">|</span>
+            <span className="text-[var(--text-muted)]">Muscat, Sultanate of Oman</span>
           </div>
         </div>
 

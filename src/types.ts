@@ -1,5 +1,7 @@
 export type Language = 'en' | 'ar';
 
+export type LayerId = 'pay' | 'accept' | 'grow' | 'build' | 'company' | 'support';
+
 export interface EcosystemNode {
   id: string;
   nameEn: string;
@@ -53,12 +55,6 @@ export interface CaseStudy {
   bgGlow: string;
 }
 
-export interface ApiSnippet {
-  language: 'curl' | 'node' | 'python' | 'php' | 'go';
-  label: string;
-  code: string;
-}
-
 export interface FraudSimParams {
   amountOMR: number;
   ipLocation: 'Oman (Local)' | 'GCC Region' | 'International (High Risk)';
@@ -79,3 +75,61 @@ export interface FraudAnalysisResult {
     deviceRisk: number;
   };
 }
+
+export interface SubProduct {
+  id: string;
+  slug: string;
+  titleEn: string;
+  titleAr: string;
+  descEn: string;
+  descAr: string;
+  iconName: string;
+  featuresEn: string[];
+  featuresAr: string[];
+  canonicalUrl: string;
+  badgeEn?: string;
+  badgeAr?: string;
+}
+
+export interface LayerDefinition {
+  id: LayerId;
+  slug: string;
+  titleEn: string;
+  titleAr: string;
+  taglineEn: string;
+  taglineAr: string;
+  summaryEn: string;
+  summaryAr: string;
+  iconName: string;
+  canonicalUrl: string;
+  products: SubProduct[];
+}
+
+export interface MetricItem {
+  id: string;
+  valueEn: string;
+  valueAr: string;
+  labelEn: string;
+  labelAr: string;
+  unitEn?: string;
+  unitAr?: string;
+  isVerified: boolean;
+  cboRef?: string;
+}
+
+export interface RouteState {
+  path: string;
+  layerId?: LayerId;
+  productSlug?: string;
+  lang: Language;
+  canonicalUrl: string;
+  is301Redirected?: boolean;
+  legacySourceUrl?: string;
+}
+
+export interface ApiSnippet {
+  language: 'curl' | 'node' | 'python' | 'php' | 'go';
+  label: string;
+  code: string;
+}
+

@@ -35,7 +35,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   const [activeStep, setActiveStep] = useState<number>(0);
   const [autoSimulate, setAutoSimulate] = useState<boolean>(true);
-  const [txnAmount, setTxnAmount] = useState<number>(24.500);
+  const [txnAmount, setTxnAmount] = useState<number>(12.500);
   const [soundboxPing, setSoundboxPing] = useState<boolean>(false);
   const [totalSimulatedTxns, setTotalSimulatedTxns] = useState<number>(14209);
 
@@ -52,7 +52,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     }
   };
 
-  // Cycle transaction simulation through nodes
+  // Cycle transaction simulation through nodes (4s loop: 6 nodes * 666ms)
   useEffect(() => {
     if (!autoSimulate) return;
     const interval = setInterval(() => {
@@ -61,12 +61,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         if (next === ECOSYSTEM_NODES.length - 1) {
           // Play soundbox trigger visual
           setSoundboxPing(true);
-          setTimeout(() => setSoundboxPing(false), 800);
+          setTimeout(() => setSoundboxPing(false), 900);
           setTotalSimulatedTxns((t) => t + 1);
         }
         return next;
       });
-    }, 1200);
+    }, 666);
     return () => clearInterval(interval);
   }, [autoSimulate]);
 
