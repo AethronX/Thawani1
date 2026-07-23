@@ -1,0 +1,6 @@
+{
+  "name": "Thawani",
+  "description": "Thawani - World-Class Next-Generation Fintech Platform (2035 Edition)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

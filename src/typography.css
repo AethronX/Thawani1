@@ -1,0 +1,200 @@
+/* Thawani 2035 Sovereign Typography System */
+
+/* Metric-matched Fallback for Zero CLS */
+@font-face {
+  font-family: "Inter-fallback";
+  src: local("Arial");
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* Font Family Stacks */
+  --font-display: "Geist", "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-text:    "Inter", "Inter-fallback", system-ui, -apple-system, sans-serif;
+  --font-mono:    "Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+  --font-arabic:  "IBM Plex Sans Arabic", "Noto Sans Arabic", sans-serif;
+
+  /* Fluid Type Scale Tokens (Display Ratio 1.333, UI Ratio 1.200) */
+  --t-display-xl: clamp(3.25rem, 2.10rem + 5.20vw, 7.50rem);
+  --t-display-l:  clamp(2.50rem, 1.80rem + 3.40vw, 4.50rem);
+  --t-h2:         clamp(2.00rem, 1.55rem + 2.10vw, 3.00rem);
+  --t-h3:         clamp(1.50rem, 1.32rem + 0.85vw, 1.875rem);
+  --t-body-lg:    clamp(1.0625rem, 1.01rem + 0.28vw, 1.25rem);
+  --t-body:       1rem;
+  --t-sm:         0.875rem;
+  --t-label:      0.75rem;
+
+  /* Line Heights */
+  --lh-display-xl: 0.92;
+  --lh-display-l:  0.98;
+  --lh-h2:         1.06;
+  --lh-h3:         1.18;
+  --lh-body:       1.55;
+  --lh-label:      1.30;
+
+  /* Optical Letter Spacing / Tracking */
+  --tr-display-xl: -0.035em;
+  --tr-display-l:  -0.030em;
+  --tr-h2:         -0.024em;
+  --tr-h3:         -0.016em;
+  --tr-body:       -0.006em;
+  --tr-label:       0.09em;  /* Uppercase micro-labels */
+
+  /* Dark Background Optical Colors */
+  --color-text-primary: #E6EFEA;
+  --color-text-secondary: #9FB2A8;
+  --color-accent-emerald: #34D399;
+  --color-accent-mint: #10B981;
+}
+
+/* Light Theme Typography Overrides */
+html.light, body.light, .light {
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+}
+
+/* Base Typographic Hierarchy Rules */
+@layer base {
+  html {
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    font-family: var(--font-text);
+    font-size: var(--t-body);
+    line-height: var(--lh-body);
+    letter-spacing: var(--tr-body);
+    color: var(--color-text-primary);
+    text-wrap: pretty;
+  }
+
+  /* Headings Optical Compensation & Strict Family Hierarchy */
+  h1, .display-h1, .text-display-hero {
+    font-family: var(--font-display);
+    font-size: var(--t-display-xl);
+    line-height: var(--lh-display-xl);
+    letter-spacing: var(--tr-display-xl);
+    font-weight: 700;
+    text-wrap: balance;
+  }
+
+  h2, .display-h2, .text-display-section {
+    font-family: var(--font-display);
+    font-size: var(--t-h2);
+    line-height: var(--lh-h2);
+    letter-spacing: var(--tr-h2);
+    font-weight: 700;
+    text-wrap: balance;
+  }
+
+  h3, .display-h3, .text-display-card {
+    font-family: var(--font-display);
+    font-size: var(--t-h3);
+    line-height: var(--lh-h3);
+    letter-spacing: var(--tr-h3);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  code, pre, .font-mono, .metric, .data, td.num, .sla, .price {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums lining-nums slashed-zero;
+    font-feature-settings: "tnum" 1, "zero" 1;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Hero Title Specific Styling */
+.hero-title {
+  font-family: var(--font-display);
+  font-size: var(--t-display-xl);
+  line-height: var(--lh-display-xl);
+  letter-spacing: var(--tr-display-xl);
+  font-weight: 700;
+  text-wrap: balance;
+  color: #F2F7F4;
+}
+
+.hero-title .accent {
+  color: var(--color-accent-emerald);
+}
+
+@supports (background-clip: text) {
+  /* Applied only to English LTR text to protect Arabic connected script */
+  [dir="ltr"] .hero-title .accent,
+  [lang="en"] .hero-title .accent {
+    background: linear-gradient(180deg, #ECFDF5 0%, #34D399 55%, #10B981 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Micro-label Uppercase Token Utility */
+.micro-label, .uppercase-label {
+  font-size: var(--t-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--tr-label);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Lead Paragraph Utility */
+.text-lead {
+  font-size: var(--t-body-lg);
+  line-height: var(--lh-body);
+  letter-spacing: var(--tr-body);
+  color: var(--color-text-secondary);
+  max-width: 68ch;
+}
+
+.text-body {
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--tr-body);
+  color: var(--color-text-secondary);
+}
+
+/* Arabic / RTL Typography Precision Rules */
+[lang="ar"], [dir="rtl"] {
+  font-family: var(--font-arabic);
+  letter-spacing: normal !important;   /* Connected script must not have letterspacing */
+  line-height: 1.85;                   /* Extra leading for Arabic script ascenders/descenders */
+  font-size: 1.08em;                   /* Optical size adjustment relative to Latin */
+  text-transform: none !important;     /* Arabic has no case distinction */
+  font-weight: 500;                    /* Optical weight balance for dark UI */
+}
+
+[lang="ar"] h1, [dir="rtl"] h1,
+[lang="ar"] h2, [dir="rtl"] h2,
+[lang="ar"] h3, [dir="rtl"] h3,
+[lang="ar"] .hero-title, [dir="rtl"] .hero-title,
+[lang="ar"] .display-h1, [dir="rtl"] .display-h1,
+[lang="ar"] .display-h2, [dir="rtl"] .display-h2,
+[lang="ar"] .display-h3, [dir="rtl"] .display-h3 {
+  font-family: var(--font-arabic);
+  letter-spacing: normal !important;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+/* Arabic solid accent text (banning gradient clips on Arabic connected script) */
+[lang="ar"] .hero-title .accent,
+[dir="rtl"] .hero-title .accent {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: #34D399 !important;
+}
+
+/* Latin brand name wrapper inside Arabic sentences */
+.latin {
+  font-family: var(--font-text);
+  font-size: 0.92em;
+  unicode-bidi: embed;
+}
